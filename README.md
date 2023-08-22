@@ -1,6 +1,8 @@
 # ESXiBrute
 This script allows you to connect to ESXi hosts using different combinations of credentials (username and password). It can be useful for testing and validating various credentials against multiple hosts.
 
+You can refer to [Attacking and Pentesting ESXi Hosts article here](https://www.hackingdream.net/2023/08/attacking-and-pentesting-vmware-esxi.html)
+
 ## Install
 
 ```
