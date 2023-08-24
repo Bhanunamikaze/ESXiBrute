@@ -1,5 +1,5 @@
 # ESXiBrute
-This script allows you to connect to ESXi hosts using different combinations of credentials (username and password). It can be useful for testing and validating various credentials against multiple hosts.
+This script allows you to connect to ESXi hosts using different combinations of credentials (username and password), Inshort it is used to bruteforce ESXi Host Credentials. It can be useful for testing and validating various credentials against multiple hosts.
 
 You can refer to [Attacking and Pentesting ESXi Hosts article here](https://www.hackingdream.net/2023/08/attacking-and-pentesting-vmware-esxi.html)
 
@@ -14,6 +14,7 @@ You can refer to [Attacking and Pentesting ESXi Hosts article here](https://www.
 
 ## Usage
 
+### ESXi_Brute 
 ```
 python ESXi_Brute.py --hosts hosts.txt --usernames usernames.txt --passwords passwords.txt --cert cert.pem [--output output.csv]
 --hosts: Path to the file containing a list of hostnames.
@@ -21,6 +22,18 @@ python ESXi_Brute.py --hosts hosts.txt --usernames usernames.txt --passwords pas
 --passwords: Path to the file containing a list of passwords.
 --cert: Path to vCenter Root certificate.
 --output: (Optional) Path to the output CSV file. If not specified, the output will be displayed on the screen.
+```
+
+### Resxtop_Brute.sh
+
+Resxtop_Brute.sh - script is used to Bruteforce Usernames and Passwords for multiple hosts at once (No Parallel Processing or Multi Threading)
+
+Download and Install [Resxtop from VMWare](https://developer.vmware.com/web/tool/8.0/resxtop)
+
+```
+export LD_LIBRARY_PATH=/usr/lib/vmware/resxtop/
+chmod +x Resxtop_Brute.sh
+./Resxtop_Brute.sh hosts.txt usernames.txt passwords.txt
 ```
 
 ## Note
